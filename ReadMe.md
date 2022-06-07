@@ -1,5 +1,5 @@
 
-## [Home]("www.github.io/Home")
+## [Home]("tanaymishra.github.io/Home/")
 ![profile](https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgkm7Wd6-nMhsi0kZHpExXS5-b3xPvpzadn5K7m0WpIJ7k4OAf41DGgLqOF-oyNboHppkUSZO0tRdXOorBLpb0CqxueW2KH5XwLpLmzYRRIHL7ZTs1aIXpicIzLcDOWWFqaygEuMktk1sA__c7VK0a0fiDn1-2qvrmyg09Kx81zq492Ry_UU2jCDq6t9A/s1920/ssc.png)
 
 
