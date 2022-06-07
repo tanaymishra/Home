@@ -1,0 +1,1122 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+:root {
+  --rem: 1.8rem;
+  --primary: #2e313b;
+  --primaryS2: #282a33;
+  --fadedText: #5c6171;
+  --faded: #515563;
+  --out: #3e414f;
+  --dark: #22242d;
+  --w: white;
+  --footer: #20222b;
+  --ldark: #30323d;
+  --cubic: cubic-bezier(0.23, 1, 0.32, 1);
+  --linerCubic: cubic-bezier(0.1, 1.29, 0.73, 1.11);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background: var(--primary);
+  overflow-x: hidden;
+}
+
+section .container {
+  position: relative;
+  z-index: 2;
+}
+
+section .accent {
+  position: absolute;
+  z-index: 1;
+}
+
+section .accent path {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: 0.2s all var(--cubic);
+  transition: 0.2s all var(--cubic);
+}
+
+button {
+  background: transparent;
+  border: none;
+  color: var(--w);
+}
+
+h1 {
+  font-size: calc(var(--rem) * 4);
+}
+
+h2 {
+  font-size: calc(var(--rem) * 3);
+}
+
+h3 {
+  font-size: calc(var(--rem) * 2);
+}
+
+h4 {
+  font-size: calc(var(--rem) * 1.5);
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.container {
+  max-width: 1500px;
+  margin: auto;
+  width: 90%;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.fdx {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.jc {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.jsp {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.al {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+nav {
+  width: 100%;
+}
+
+nav .inner-nav {
+  min-height: max(10vh,calc(var(--rem)*4));
+}
+
+nav .logo {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  min-width: 120px;
+}
+
+nav .logo img {
+  width: 60%;
+  max-width: 180px;
+}
+
+nav ul {
+  list-style: none;
+  font-family: "Nunito";
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  font-weight: 300;
+  color: var(--w);
+  font-size: var(--rem);
+}
+
+nav ul li {
+  margin: 0% calc(var(--rem) * 1.5);
+  position: relative;
+  cursor: pointer;
+}
+
+nav ul li:hover > .l {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 1;
+}
+
+nav ul li .l {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  -webkit-transition: 0.3s all var(--cubic);
+  transition: 0.3s all var(--cubic);
+  border-radius: var(--rem);
+  background: var(--w);
+  opacity: 0;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+nav .login {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: var(--rem);
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+nav .login .ms {
+  display: none;
+}
+
+nav .login button {
+  font-family: "Nunito";
+  font-size: var(--rem);
+  cursor: pointer;
+}
+
+nav .login button:nth-child(1) {
+  font-weight: 300;
+}
+
+nav .login button:nth-child(2) {
+  background: var(--out);
+  aspect-ratio: 2.27;
+  overflow: hidden;
+  min-width: 100px;
+  width: 30%;
+}
+
+nav .login button:nth-child(2):active {
+  -webkit-box-shadow: 5px 5px #8d95b0;
+          box-shadow: 5px 5px #8d95b0;
+}
+
+nav .login button:nth-child(2) .img-container {
+  background: var(--dark);
+  height: 100%;
+  width: 35%;
+  position: relative;
+  border-radius: 0 2rem 0 0;
+  top: 10%;
+}
+
+nav .login button:nth-child(2) .img-container img {
+  width: 50%;
+}
+
+nav .login button:nth-child(2) span {
+  width: 55%;
+  height: 100%;
+}
+
+section.first {
+  position: relative;
+  margin-top: calc(var(--rem) * 3);
+}
+
+section.first .s1Side {
+  position: absolute;
+  top: 2%;
+  left: 0%;
+}
+
+section.first #house {
+  position: absolute;
+  width: max(10rem,60vw,100px);
+  min-width: 732px;
+  top: 0%;
+  max-width: 1150px;
+  right: -18%;
+  z-index: -1;
+}
+
+section.first .details {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Poppins";
+}
+
+section.first .details .tex1 {
+  max-width: 600px;
+  margin-bottom: calc(var(--rem) * 2);
+}
+
+section.first .details .tex1 h4 {
+  font-family: "Nunito";
+  font-weight: 400;
+  font-size: calc(var(--rem) * 1);
+  color: var(--fadedText);
+}
+
+section.first .details .tex1 h2 {
+  font-size: calc(var(--rem) * 2);
+  color: var(--w);
+  font-weight: 600;
+}
+
+section.first .details .srh {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1rem;
+}
+
+section.first .details .srh h4 {
+  font-weight: 400;
+  font-size: calc(var(--rem) * 0.9);
+  color: var(--w);
+}
+
+section.first .details .srh .search {
+  border-radius: calc(var(--rem) * 10);
+  background: var(--out);
+  width: 20%;
+  overflow: hidden;
+  min-width: 260px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  aspect-ratio: 5.8;
+}
+
+section.first .details .srh .search .cir {
+  position: absolute;
+  aspect-ratio: 1;
+  width: 40%;
+  right: -16%;
+  top: -18%;
+  border-radius: 100%;
+  background: var(--dark);
+  z-index: 1;
+}
+
+section.first .details .srh .search .input {
+  height: 100%;
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+section.first .details .srh .search .input input {
+  background: none;
+  border: none;
+  height: 100%;
+  width: 75%;
+  outline: none;
+  color: white;
+  font-family: "Poppins";
+}
+
+section.first .details .srh .search .input input::-webkit-input-placeholder {
+  font-family: "Poppins";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+  font-family: var(--rem);
+}
+
+section.first .details .srh .search .input input:-ms-input-placeholder {
+  font-family: "Poppins";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+  font-family: var(--rem);
+}
+
+section.first .details .srh .search .input input::-ms-input-placeholder {
+  font-family: "Poppins";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+  font-family: var(--rem);
+}
+
+section.first .details .srh .search .input input::placeholder {
+  font-family: "Poppins";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+  font-family: var(--rem);
+}
+
+section.first .details .srh .search .input button {
+  position: absolute;
+  left: 92%;
+}
+
+section.first .details .spl {
+  margin: 7rem 0;
+}
+
+section.first .details .spl .inner-spl {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  gap: var(--rem);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.first .details .spl .inner-spl .line {
+  height: 100%;
+  width: 3px;
+  border-radius: 20rem;
+  background: var(--faded);
+}
+
+section.first .details .spl .inner-spl .special {
+  color: var(--w);
+}
+
+section.first .details .spl .inner-spl .special .main {
+  font-weight: 400;
+  font-size: calc(var(--rem) * 1.4);
+}
+
+section.first .details .spl .inner-spl .special .sub {
+  font-weight: 300;
+  font-size: calc(var(--rem) * 0.9);
+}
+
+section.second {
+  background: var(--primaryS2);
+  padding: calc(var(--rem) * 2) 0;
+  min-height: 400px;
+  overflow: hidden;
+  position: relative;
+}
+
+section.second::after {
+  content: " ";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: var(--primaryS2);
+  top: 0%;
+  -webkit-animation: 1s opensvg cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+          animation: 1s opensvg cubic-bezier(0.785, 0.135, 0.15, 0.86) forwards;
+}
+
+section.second svg {
+  position: absolute;
+  top: calc(50% - 3.4vw);
+}
+
+section.second svg path {
+  stroke-width: 2px;
+}
+
+section.second .cards {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  gap: var(--rem);
+  z-index: 2;
+}
+
+section.second .cards h3 {
+  font-family: "nunito";
+  color: var(--w);
+  font-size: calc(var(--rem) * 1.5);
+}
+
+section.second .cards .circle {
+  aspect-ratio: 1;
+  width: 18%;
+  background: var(--out);
+  border-radius: 100%;
+  min-width: 70px;
+}
+
+section.second .cards .circle img {
+  width: 40%;
+}
+
+section.second .cards p {
+  font-family: "Poppins";
+  color: var(--w);
+  font-size: calc(var(--rem) * 0.9);
+  text-align: center;
+  font-weight: 400;
+  max-width: 400px;
+}
+
+section.third {
+  background: var(--primaryS2);
+}
+
+section.third .sub {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+section.third .sub.srh {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 700px;
+  color: var(--w);
+  gap: calc(var(--rem) * 2);
+}
+
+section.third .sub.srh .tHead {
+  gap: var(--rem);
+}
+
+section.third .sub.srh .tHead h3 {
+  font-family: "Poppins";
+  color: var(--w);
+  font-weight: 600;
+  font-size: calc(var(--rem) * 1.6);
+}
+
+section.third .sub.srh .tHead .sel {
+  font-family: "Nunito";
+  gap: calc(var(--rem) * 0.8);
+}
+
+section.third .sub.srh .tHead .sel .select {
+  position: relative;
+}
+
+section.third .sub.srh .tHead .sel .select .parent.active {
+  border-radius: 1rem 1rem 0 0;
+}
+
+section.third .sub.srh .tHead .sel .select .options.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+section.third .sub.srh .tHead .sel .select .parent {
+  font-weight: 600;
+  -webkit-transition: 0.3s all var(--cubic);
+  transition: 0.3s all var(--cubic);
+  cursor: pointer;
+  font-size: calc(var(--rem) * 0.9);
+  background: var(--out);
+  min-width: 110px;
+  aspect-ratio: 2.75;
+  border-radius: 20rem;
+  max-width: 140px;
+  width: 10vw;
+  gap: calc(var(--rem) * 0.4);
+}
+
+section.third .sub.srh .tHead .sel .select .parent img {
+  width: 13%;
+}
+
+section.third .sub.srh .tHead .sel .select .parent * {
+  pointer-events: none;
+}
+
+section.third .sub.srh .tHead .sel .select .options {
+  -webkit-transition: 0.3s all var(--cubic);
+  transition: 0.3s all var(--cubic);
+  position: absolute;
+  opacity: 0;
+  font-size: calc(var(--rem) * 0.9);
+  background: var(--out);
+  min-width: 110px;
+  max-width: 140px;
+  width: 10vw;
+  left: 50%;
+  top: 100%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  pointer-events: none;
+  padding: var(--rem);
+  gap: calc(var(--rem) * 0.4);
+  border-radius: 0 0 1rem 1rem;
+}
+
+section.third .sub.srh .tHead .sel .select .options .option {
+  width: 100%;
+  cursor: pointer;
+}
+
+section.third .sub.srh .tHead .sel .select .options .option:active {
+  background: var(--dark);
+  color: var(--w);
+}
+
+section.third .sub.srh .srh-main {
+  gap: calc(var(--rem) * 0.6);
+}
+
+section.third .sub.srh .srh-main h4 {
+  font-family: "Poppins";
+  font-weight: 400;
+  font-size: calc(var(--rem));
+}
+
+section.third .sub.srh .srh-main .searchbox {
+  font-size: calc(var(--rem) * 0.8);
+}
+
+section.third .sub.srh .srh-main .searchbox form {
+  background: var(--out);
+  font-family: "Nunito";
+  width: 60%;
+  max-width: 380px;
+  border-radius: 20rem 0 0 20rem;
+}
+
+section.third .sub.srh .srh-main .searchbox form .wrapper {
+  width: 100%;
+  margin: auto;
+  padding: calc(var(--rem) * 0.6);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 2%;
+}
+
+section.third .sub.srh .srh-main .searchbox form .wrapper .key {
+  -webkit-animation: scaler 0.2s var(--cubic);
+          animation: scaler 0.2s var(--cubic);
+  background: var(--ldark);
+  height: 0%;
+  padding: calc(var(--rem) * 0.2) calc(var(--rem) * 0.8);
+  border-radius: 8rem;
+  gap: 8%;
+}
+
+section.third .sub.srh .srh-main .searchbox form .wrapper input {
+  background: none;
+  color: var(--w);
+  border: none;
+  outline: none;
+  font-weight: 300;
+}
+
+section.third .sub.srh .srh-main .srhButton {
+  background: var(--dark);
+  font-family: "Poppins";
+  width: 18%;
+  max-width: 180px;
+  padding: calc(var(--rem) * 0.8) calc(var(--rem) * 0.6);
+  font-size: calc(var(--rem) * 0.8);
+  -ms-flex-item-align: self-start;
+      -ms-grid-row-align: self-start;
+      align-self: self-start;
+  gap: calc(var(--rem) * 0.3);
+  border-radius: 0 20rem 20rem 0;
+}
+
+section.third .sub.srh .srh-main .srhButton img {
+  width: 18%;
+}
+
+section.third .rev {
+  border: 2px solid var(--out);
+  border-radius: 2rem;
+  min-height: 300px;
+  max-width: 580px;
+  position: relative;
+}
+
+section.third .rev::after {
+  content: "";
+  position: absolute;
+  z-index: 2;
+  background: var(--primaryS2);
+  width: 100%;
+  height: 100%;
+  border-radius: 2rem;
+}
+
+section.third .rev .twwet {
+  position: absolute;
+  width: 25%;
+  top: 74%;
+  left: -11%;
+  z-index: 1;
+}
+
+section.third .rev .inner {
+  width: 80%;
+  position: relative;
+  z-index: 3;
+  margin: auto;
+  gap: var(--rem);
+}
+
+section.third .rev .inner .profile {
+  gap: calc(var(--rem) * 0.4);
+}
+
+section.third .rev .inner .profile .image {
+  width: 12%;
+  position: relative;
+}
+
+section.third .rev .inner .profile .image::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  border-radius: 100%;
+  aspect-ratio: 1;
+  background: rgba(77, 81, 99, 0.3);
+  z-index: 3;
+}
+
+section.third .rev .inner .profile .image .img {
+  background: url(../files/profile.png);
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  aspect-ratio: 1;
+  border: calc(var(--rem) * 0.3) solid var(--out);
+  border-radius: 100%;
+}
+
+section.third .rev .inner .profile .nt {
+  gap: calc(var(--rem) * 0.01);
+}
+
+section.third .rev .inner .profile .nt .name {
+  font-family: "Poppins";
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  font-size: calc(var(--rem) * 1);
+  color: var(--w);
+  gap: calc(var(--rem) * 0.4);
+}
+
+section.third .rev .inner .profile .nt .name span {
+  font-weight: 500;
+}
+
+section.third .rev .inner .profile .nt .wrap-prd {
+  font-family: "Nunito";
+  font-size: calc(var(--rem) * 0.85);
+  color: var(--fadedText);
+}
+
+section.third .rev .inner .profile .nt .wrap-prd p {
+  font-weight: 300;
+}
+
+section.third .rev .inner .text {
+  font-family: "Poppins";
+  font-weight: 300;
+  font-size: calc(var(--rem) * 0.9);
+  color: var(--w);
+}
+
+section.fourth {
+  background: var(--primaryS2);
+  padding: calc(var(--rem) * 5) 0;
+  position: relative;
+}
+
+section.fourth .companyAccent {
+  position: absolute;
+  right: 0%;
+  width: 10%;
+  max-width: 60px;
+  top: 35%;
+}
+
+section.fourth .container {
+  gap: calc(var(--rem) * 2);
+}
+
+section.fourth .brands {
+  width: 100%;
+  gap: calc(var(--rem) * 2);
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+section.fourth .brands img {
+  width: 16%;
+  min-width: 100px;
+}
+
+section.fourth h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  font-size: calc(var(--rem) * 1.8);
+  color: var(--w);
+}
+
+section.fifth {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: calc(var(--rem) * 4) 0;
+  overflow: hidden;
+}
+
+section.fifth::after {
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.06);
+  width: 50%;
+  height: 100%;
+}
+
+section.fifth .sub {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  z-index: 2;
+}
+
+section.fifth .sub:nth-child(1) {
+  gap: calc(var(--rem) * 2.5);
+}
+
+section.fifth .sub:nth-child(1) h2 {
+  font-family: "Poppins";
+  color: var(--w);
+  font-weight: 600;
+  font-size: calc(var(--rem) * 1.8);
+}
+
+section.fifth .sub:nth-child(1) form {
+  gap: calc(var(--rem) * 2);
+}
+
+section.fifth .sub:nth-child(1) form .info {
+  gap: var(--rem);
+}
+
+section.fifth .sub:nth-child(1) form .info .name {
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  overflow: hidden;
+  gap: calc(var(--rem));
+}
+
+section.fifth .sub:nth-child(1) form .info .input {
+  font-family: "Nunito";
+  font-size: calc(var(--rem) * 0.9);
+  color: var(--w);
+  max-width: 300px;
+  gap: calc(var(--rem) * 0.4);
+}
+
+section.fifth .sub:nth-child(1) form .info .input input {
+  outline: none;
+  background: var(--out);
+  border: none;
+  color: var(--w);
+  padding: calc(var(--rem) * 0.8);
+  border-radius: calc(var(--rem) * 0.3);
+}
+
+section.fifth .sub:nth-child(1) form .info .input input::-webkit-input-placeholder {
+  font-family: "Nunito";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+section.fifth .sub:nth-child(1) form .info .input input:-ms-input-placeholder {
+  font-family: "Nunito";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+section.fifth .sub:nth-child(1) form .info .input input::-ms-input-placeholder {
+  font-family: "Nunito";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+section.fifth .sub:nth-child(1) form .info .input input::placeholder {
+  font-family: "Nunito";
+  color: var(--w);
+  opacity: 0.4;
+  font-weight: 300;
+}
+
+section.fifth .sub:nth-child(1) form .mobile .wrapper {
+  background: var(--out);
+  border-radius: calc(var(--rem) * 0.3);
+}
+
+section.fifth .sub:nth-child(1) form .mobile .wrapper .ccCode span {
+  width: 20%;
+  gap: calc(var(--rem) * 0.2);
+}
+
+section.fifth .sub:nth-child(1) form .mobile .wrapper .ccCode input {
+  background: transparent;
+  width: 80%;
+}
+
+section.fifth .sub:nth-child(1) form button {
+  font-family: "Poppins";
+  font-size: calc(var(--rem) * 0.8);
+  font-weight: 400;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: var(--out);
+  padding: calc(var(--rem) * 0.7);
+  max-width: 160px;
+  position: relative;
+  overflow: hidden;
+}
+
+section.fifth .sub:nth-child(1) form button img {
+  position: relative;
+  z-index: 2;
+}
+
+section.fifth .sub:nth-child(1) form button::after {
+  content: " ";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 72%;
+  border-radius: 3rem 0 0 0;
+  background: var(--dark);
+}
+
+section.fifth .sub:nth-child(2) {
+  margin-left: 10%;
+  gap: calc(var(--rem) * 2.5);
+  position: relative;
+}
+
+section.fifth .sub:nth-child(2) .firstAccent,
+section.fifth .sub:nth-child(2) .secondAccent {
+  position: absolute;
+}
+
+section.fifth .sub:nth-child(2) .firstAccent {
+  top: 90%;
+  left: -5%;
+}
+
+section.fifth .sub:nth-child(2) .secondAccent {
+  top: 60%;
+  right: -29%;
+}
+
+section.fifth .sub:nth-child(2) .head {
+  gap: calc(var(--rem) * 0.2);
+}
+
+section.fifth .sub:nth-child(2) .head h2 {
+  font-family: "Poppins";
+  font-weight: 600;
+  color: var(--w);
+  font-size: calc(var(--rem) * 1.8);
+}
+
+section.fifth .sub:nth-child(2) .head .subHead {
+  font-family: "Nunito";
+  font-size: calc(var(--rem) * 0.9);
+  color: var(--w);
+  font-weight: 400;
+}
+
+section.fifth .sub:nth-child(2) .cinfo {
+  font-family: nunito;
+  max-width: 320px;
+  font-size: calc(var(--rem) * 0.9);
+  color: var(--w);
+  gap: calc(var(--rem) * 0.5);
+}
+
+section.fifth .sub:nth-child(2) .cinfo span {
+  font-weight: 300;
+}
+
+section.fifth .sub:nth-child(2) .cinfo .column {
+  gap: calc(var(--rem) * 0.6);
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+footer {
+  background-color: var(--footer);
+}
+
+footer .container {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: calc(var(--rem)) 0;
+  font-family: "Nunito";
+  color: var(--w);
+  font-size: calc(var(--rem) * 0.8);
+}
+
+footer .container .c {
+  font-weight: 600;
+  gap: calc(var(--rem) * 0.3);
+}
+
+footer .container .socials {
+  gap: calc(var(--rem) * 1);
+}
+
+@-webkit-keyframes opensvg {
+  from {
+  }
+  to {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@keyframes opensvg {
+  from {
+  }
+  to {
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+  }
+}
+
+@-webkit-keyframes scaler {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes scaler {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root {
+    --rem: 1.5rem !important;
+  }
+  .login * {
+    display: none;
+  }
+  .login .ms {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  ul {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-clip-path: circle(5% at 100% -10%);
+            clip-path: circle(5% at 100% -10%);
+  }
+  ul li {
+    font-size: calc(var(--rem) * 2);
+  }
+  .third {
+    padding: calc(var(--rem) * 2) 0;
+  }
+  .third .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: calc(var(--rem) * 3.5);
+  }
+  .third .container .sub:nth-child(1) {
+    width: 100%;
+  }
+  .third .container .sub:nth-child(2) {
+    min-height: calc(var(--rem) * 17);
+  }
+  .fifth .sub {
+    padding: calc(var(--rem) * 2) 0;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  :root {
+    --rem: 1.6rem;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .second .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: var(--rem);
+  }
+  footer .social span {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .first #house {
+    display: none;
+  }
+  .fifth::after {
+    width: 100% !important;
+    height: 63% !important;
+  }
+  .fifth .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: calc(var(--rem) * 4);
+  }
+  .fifth .container .sub:nth-child(2) {
+    margin: 0;
+  }
+}
+/*# sourceMappingURL=style.css.map */
